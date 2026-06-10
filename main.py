@@ -24,6 +24,12 @@ to_addr = os.getenv("TO_ADDR")
 OWM_Endpoint = 'https://api.openweathermap.org/data/2.5/forecast'
 api_key = os.getenv("OPENWEATHER_API_KEY")
 
+print("SMTP_ID:", smtp_id)
+print("SMTP_USER:", smtp_user)
+print("FROM_ADDR:", from_addr)
+print("TO_ADDR:", to_addr)
+print("API_KEY Loaded:", api_key is not None)
+
 
 parameters ={
     'lat':19.075983, 
