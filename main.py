@@ -14,15 +14,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-smtp_id = os.getenv(smtp_id)
-smtp_port = os.getenv(smtp_port)
-smtp_user = os.getenv(smtp_user)
-smtp_password = os.getenv(smtp_password)
-from_addr = os.getenv(from_addr)
-to_addr = os.getenv(to_addr)
+smtp_id = os.getenv(SMTP_ID)
+smtp_port = os.getenv(SMTP_PORT)
+smtp_user = os.getenv(SMTP_USER)
+smtp_password = os.getenv(SMTP_PASSWORD)
+from_addr = os.getenv(FROM_ADDR)
+to_addr = os.getenv(TO_ADDR)
 
 OWM_Endpoint = 'https://api.openweathermap.org/data/2.5/forecast'
-api_key =  os.getenv(api_key)
+api_key =  os.getenv(OPENWEATHER_API_KEY)
 
 
 parameters ={
