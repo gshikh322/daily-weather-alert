@@ -15,7 +15,7 @@ load_dotenv()
 
 
 smtp_id = os.getenv("SMTP_ID")
-smtp_port = int(os.getenv("SMTP_PORT"))
+smtp_port = 587
 smtp_user = os.getenv("SMTP_USER")
 smtp_password = os.getenv("SMTP_PASSWORD")
 from_addr = os.getenv("FROM_ADDR")
