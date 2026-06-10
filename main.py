@@ -8,17 +8,21 @@
 import requests
 import smtplib
 from email.message import EmailMessage
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-smtp_id = 'smtp.gmail.com'
-smtp_port = 587
-smtp_user = 'gshaikh32@gmail.com'
-smtp_password = 'fvkc tnze dpno nteh'
-from_addr = 'gshaikh32@gmail.com'
-to_addr = 'gshaikh322@gmail.com'
+smtp_id = os.getenv(smtp_id)
+smtp_port = os.getenv(smtp_port)
+smtp_user = os.getenv(smtp_user)
+smtp_password = os.getenv(smtp_password)
+from_addr = os.getenv(from_addr)
+to_addr = os.getenv(to_addr)
 
 OWM_Endpoint = 'https://api.openweathermap.org/data/2.5/forecast'
-api_key = '61a9a80ec2158c62c6d1dc084c84343a'
+api_key =  os.getenv(api_key)
 
 
 parameters ={
