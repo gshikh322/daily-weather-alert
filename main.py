@@ -40,9 +40,20 @@ data = response.json()
 is_raining = False
 raining_details = []
 for weather_data in data['list']:
-    if weather_data['weather'][0] ['id'] < 600 and weather_data['rain']['3h'] >= 0.5 and weather_data['pop'] >= 0.6:
+
+    rain_amount = weather_data.get('rain', {}).get('3h', 0)
+
+    if (
+        weather_data['weather'][0]['id'] < 600
+        and rain_amount >= 0.5
+        and weather_data['pop'] >= 0.6
+    ):
         is_raining = True
-        raining_details.append([weather_data['dt_txt'],weather_data['rain']['3h'],weather_data['pop']])
+        raining_details.append([
+            weather_data['dt_txt'],
+            rain_amount,
+            weather_data['pop']
+        ])
 
 if is_raining:
     message = ""
